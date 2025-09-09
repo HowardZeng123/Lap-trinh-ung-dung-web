@@ -1,0 +1,78 @@
+/* Fix for annoying progress bar at bottom and horizontal scroll */
+
+/* Remove horizontal scroll bar */
+html {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+/* Fix container overflow */
+.container, .container-fluid {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+/* Fix row overflow */
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow-x: hidden !important;
+}
+
+/* Hide all progress elements */
+progress, 
+.progress, 
+.progress-bar,
+[role="progressbar"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+/* Hide browser native progress bar */
+progress::-webkit-progress-bar,
+progress::-webkit-progress-value,
+progress::-moz-progress-bar {
+    display: none !important;
+    background: transparent !important;
+}
+
+/* Hide any fixed bottom elements that might be progress bars */
+*[style*="position: fixed"][style*="bottom"],
+.fixed-bottom {
+    display: none !important;
+}
+
+/* Hide reading progress bars */
+.reading-progress,
+.scroll-progress,
+.page-progress {
+    display: none !important;
+}
+
+/* Override any blue gradient bars at bottom */
+body::after,
+html::after {
+    display: none !important;
+}
+
+/* Hide any pseudo elements that create bars */
+*::before[style*="background: linear-gradient"],
+*::after[style*="background: linear-gradient"] {
+    display: none !important;
+}
+
+/* Specifically target blue progress indicators */
+[style*="background: blue"],
+[style*="background-color: blue"],
+[class*="blue"],
+[class*="progress"] {
+    display: none !important;
+}

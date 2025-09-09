@@ -1,0 +1,89 @@
+/* Icon Fix CSS - Load this after everything else */
+
+/* Ensure icon fonts are loaded properly */
+@font-face {
+    font-family: 'Linearicons-Free';
+    src: url('../fonts/Linearicons-Free.eot');
+    src: url('../fonts/Linearicons-Free.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Linearicons-Free.woff2') format('woff2'),
+         url('../fonts/Linearicons-Free.woff') format('woff'),
+         url('../fonts/Linearicons-Free.ttf') format('truetype'),
+         url('../fonts/Linearicons-Free.svg#Linearicons-Free') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Force icon font for all icon classes */
+.lnr, [class^="lnr-"], [class*=" lnr-"] {
+    font-family: 'Linearicons-Free' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Specific icon fixes */
+.lnr-enter-down:before { content: "\e901"; }
+.lnr-user:before { content: "\e902"; }
+.lnr-magnifier:before { content: "\e903"; }
+.lnr-calendar-full:before { content: "\e904"; }
+.lnr-bubble:before { content: "\e905"; }
+.lnr-star:before { content: "\e906"; }
+.lnr-fire:before { content: "\e907"; }
+
+/* FontAwesome fallback */
+.fa, [class^="fa-"], [class*=" fa-"] {
+    font-family: 'FontAwesome' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Icon spacing fixes */
+i.lnr, i.fa, span.lnr, span.fa {
+    margin-right: 0.3em;
+    display: inline-block;
+    width: auto;
+}
+
+/* Header icon fixes */
+.header-top i {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.auth-links i {
+    margin-right: 0.25rem;
+}
+
+.search-toggle i {
+    font-size: 16px;
+}
+
+/* Sidebar icon fixes */
+.sidebars-area i {
+    margin-right: 0.5rem;
+    font-size: 14px;
+    color: inherit;
+}
+
+/* Meta icons in cards */
+.card i.lnr {
+    margin-right: 0.25rem;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+/* Button icons */
+.btn i {
+    margin-right: 0.25rem;
+    vertical-align: middle;
+}
